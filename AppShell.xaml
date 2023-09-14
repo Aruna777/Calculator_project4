@@ -1,0 +1,10 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="Calculator.AppShell"
+       xmlns:local="clr-namespace:Calculator"
+       
+       >
+    <ShellContent Title="Calculator" ContentTemplate="{DataTemplate local:MainPage}"  Route="MainPage" />
+    <ShellContent Title="Take Quiz" ContentTemplate="{DataTemplate local:MathQuiz}"  Route="MathQuiz" />
+    <ShellContent Title="History" ContentTemplate="{DataTemplate local:HistoryPage}"  Route="HistoryPage" />
+</Shell>
