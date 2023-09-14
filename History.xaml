@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.History" 
+             Title="History">
+    <VerticalStackLayout>
+        <Button Text="Clear" 
+                WidthRequest="400" 
+                TextColor="Black"
+                BackgroundColor="Yellow" 
+                Clicked="Button_Clicked" />
+        <CollectionView x:Name="CalculationsList" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label HorizontalOptions="CenterAndExpand" 
+                               FontSize="30" 
+                               TextColor="Black" 
+                               BackgroundColor="Cyan" 
+                               Grid.Row="0"  
+                               VerticalOptions="CenterAndExpand" 
+                               Grid.Column="1" Text="{Binding Calculation}" 
+                               />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
